@@ -1,8 +1,8 @@
 import java.util.ArrayList;
 
-public class Team {
+public class Team<T extends Player> {
     private String name;
-    private ArrayList<Player> members = new ArrayList();
+    private ArrayList<T> members = new ArrayList();
 
     public Team(String name) {
         this.name = name;
@@ -13,10 +13,10 @@ public class Team {
     }
 
 
-    public boolean addPlayer(Player player) {
+    public boolean addPlayer(T player) {
         if (members.contains(player)) {
-            System.out.println(player.getName() + " is already in this team");
-
+            // no need to cast anymore since T extends Player
+            System.out.println(player.getName() + "is already in this team");
             return false;
         } else {
             members.add(player);
