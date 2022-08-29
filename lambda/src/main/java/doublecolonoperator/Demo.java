@@ -31,5 +31,6 @@ public class Demo {
         Consumer<Integer> display = System.out::println;
         display.accept(5);
 
+
     }
 }
