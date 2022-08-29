@@ -1,7 +1,6 @@
 package functionalinterfaces;
 
-import java.util.function.Consumer;
-import java.util.function.Predicate;
+import java.util.function.*;
 
 public class Examples {
     public static void main(String[] args) {
@@ -22,12 +21,29 @@ public class Examples {
 
         //*********Consumer************
 
-        Consumer<Integer> th = i-> System.out.println(i);
+        Consumer<Integer> th = i -> System.out.println(i);
         th.accept(50);
 
 
-    }
+        //**********BiConsumer****************
 
+        BiConsumer<Integer, Integer> addTwo = (x, y) -> System.out.println(x + y);
+        addTwo.accept(50, 70);
+
+        //*********FUNCTION***************
+
+        Function<String, String> fun = s -> "Hello " + s;
+        System.out.println(fun.apply("Nijad"));
+
+
+        //**********Supplier************
+
+        Supplier<Double> randomValue = () -> Math.random();
+        Double db = randomValue.get();
+        System.out.println(db);
+
+
+    }
 
 
 }
