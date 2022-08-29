@@ -2,10 +2,12 @@ package task;
 
 import lombok.*;
 
-@Getter
-@Setter
-@ToString
-@AllArgsConstructor
+// @Builder generates an @AllArgsConstructor unless there is another @XConstructor
+//@Getter
+//@Setter
+//@ToString
+//@AllArgsConstructor
+@Data
 @Builder
 public class Orange {
 
