@@ -26,6 +26,7 @@ public class CreatingStream {
 
         Stream<Language> myLanguagesStream = myLanguages.stream();
 
+
         //Creating Stream from values
         Stream<Integer> stream = Stream.of(1, 2, 3, 4);
 
